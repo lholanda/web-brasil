@@ -6,11 +6,15 @@ pipeline {
     }
 
     stages {
-        stage ('Build Image') {
+        stage 'primeiro'
+            echo "teste 1"
+        stage 'segundo'
+            echo "teste 2"
+        stage 'Build Image' {
             steps {
                 script {
-                    echo 'teste'
-                    
+                    echo 'teste build image 3'
+
                     /*dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")*/
 
                 }
