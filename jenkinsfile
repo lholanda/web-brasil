@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage 'Build Image' {
+        stage ('Build Image') {
             steps {
                 script {
                     echo 'teste build image 3'
