@@ -1,11 +1,17 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM('* * * * *')
+    }
+
     stages {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")
+                    echo 'teste'
+                    
+                    /*dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")*/
 
                 }
             }
