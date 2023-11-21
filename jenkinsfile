@@ -6,10 +6,6 @@ pipeline {
     }
 
     stages {
-        stage 'primeiro'
-            echo "teste 1"
-        stage 'segundo'
-            echo "teste 2"
         stage 'Build Image' {
             steps {
                 script {
