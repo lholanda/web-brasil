@@ -6,10 +6,18 @@ pipeline {
     }
 
     stages {
-        stage ('Build Image') {
+        stage ('pull from github') {
             steps {
                 script {
-                    echo 'build image ****'
+                    echo 'pull from github'
+
+                }
+            }
+        }
+        stage ('build Image') {
+            steps {
+                script {
+                    echo 'push image ****'
 
                     /*dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")*/
 
