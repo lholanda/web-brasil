@@ -9,7 +9,17 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    echo 'teste build image 3'
+                    echo 'build image ****'
+
+                    /*dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")*/
+
+                }
+            }
+        }
+        stage ('Push Image') {
+            steps {
+                script {
+                    echo 'push image ****'
 
                     /*dockerapp= docker.build("lholanda/web-brasil:teste", "-f ./src/Dockerfile ./src")*/
 
