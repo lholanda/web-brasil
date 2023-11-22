@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage ('pull from github') {
+        stage ('1-pull from github') {
             steps {
                 script {
                     echo 'pull from github'
@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }
-        stage ('build Image') {
+        stage ('2-build Image') {
             steps {
                 script {
                     echo 'push image ****'
@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-        stage ('Push Image') {
+        stage ('3-Push Image') {
             steps {
                 script {
                     echo 'push image ****'
